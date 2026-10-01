@@ -1,0 +1,374 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #28551f;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 45px;
+}
+
+
+/* =========================
+   LOGO AREA
+========================= */
+
+.logo-area {
+    text-align: center;
+    width: 100%;
+}
+
+
+/* =========================
+   TRICYCLE ICON
+========================= */
+
+.tricycle {
+    position: relative;
+
+    width: 300px;
+    height: 190px;
+
+    margin: 0 auto 15px;
+
+    color: #28551f;
+}
+
+
+/* Main body */
+
+.tricycle .body {
+    position: absolute;
+
+    width: 210px;
+    height: 80px;
+
+    background-color: #28551f;
+
+    left: 40px;
+    top: 65px;
+
+    border-radius: 35px 25px 15px 25px;
+}
+
+
+/* Roof */
+
+.tricycle .roof {
+    position: absolute;
+
+    width: 145px;
+    height: 70px;
+
+    background-color: #28551f;
+
+    left: 75px;
+    top: 20px;
+
+    border-radius: 45px 45px 5px 5px;
+}
+
+
+/* Front */
+
+.tricycle .front {
+    position: absolute;
+
+    width: 65px;
+    height: 80px;
+
+    background-color: #28551f;
+
+    right: 15px;
+    top: 65px;
+
+    border-radius: 15px 40px 40px 10px;
+}
+
+
+/* Wheels */
+
+.tricycle .wheel {
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    background-color: #28551f;
+
+    border-radius: 50%;
+
+    bottom: 5px;
+}
+
+.wheel-left {
+    left: 30px;
+}
+
+.wheel-right {
+    right: 10px;
+}
+
+
+/* Wheel holes */
+
+.tricycle .wheel::after {
+    content: "";
+
+    position: absolute;
+
+    width: 25px;
+    height: 25px;
+
+    background-color: white;
+
+    border-radius: 50%;
+
+    top: 20px;
+    left: 20px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.logo-area h1 {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 0.9;
+
+    color: #0f5b0c;
+
+    letter-spacing: -3px;
+}
+
+.logo-area h2 {
+    font-size: 70px;
+    font-weight: 700;
+
+    color: #0f5b0c;
+
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   LOGIN BOX
+========================= */
+
+.login-box {
+    width: 83%;
+    max-width: 850px;
+
+    margin-top: 185px;
+
+    background-color: #d5dbd2;
+}
+
+
+/* =========================
+   LOGIN TITLE
+========================= */
+
+.login-title {
+    height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    font-size: 39px;
+    font-weight: 400;
+
+    color: #28551f;
+}
+
+
+/* =========================
+   USER ICON
+========================= */
+
+.user-icon {
+    width: 55px;
+    height: 70px;
+
+    position: relative;
+}
+
+
+/* Head */
+
+.user-icon .head {
+    width: 30px;
+    height: 30px;
+
+    border: 4px solid #28551f;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    top: 0;
+    left: 12px;
+}
+
+
+/* Body */
+
+.user-icon .shoulder {
+    width: 50px;
+    height: 35px;
+
+    border: 4px solid #28551f;
+
+    border-radius: 30px 30px 0 0;
+
+    position: absolute;
+
+    bottom: 0;
+    left: 2px;
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.options {
+    width: 100%;
+}
+
+
+/* Each option */
+
+.option {
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px 0 35px;
+
+    border-top: 2px solid #222;
+
+    color: #28551f;
+
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+
+/* Hide actual radio */
+
+.option input {
+    display: none;
+}
+
+
+/* Custom radio */
+
+.radio {
+    width: 55px;
+    height: 55px;
+
+    border: 3px solid white;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    position: relative;
+}
+
+
+/* Selected radio */
+
+.option input:checked + .radio {
+    background-color: #496545;
+
+    border: 5px double white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding-top: 25px;
+    }
+
+    .tricycle {
+        transform: scale(0.7);
+        margin-top: -15px;
+        margin-bottom: -15px;
+    }
+
+    .logo-area h1 {
+        font-size: 50px;
+    }
+
+    .logo-area h2 {
+        font-size: 48px;
+    }
+
+    .login-box {
+        width: 88%;
+        margin-top: 100px;
+    }
+
+    .login-title {
+        height: 90px;
+
+        padding: 0 20px;
+
+        font-size: 22px;
+    }
+
+    .user-icon {
+        transform: scale(0.7);
+    }
+
+    .option {
+        height: 100px;
+
+        padding: 0 20px;
+
+        font-size: 25px;
+    }
+
+    .radio {
+        width: 42px;
+        height: 42px;
+    }
+}
