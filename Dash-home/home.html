@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard | Tricycle Connect</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <button class="menu-button" id="menuButton" aria-label="Open menu">☰</button>
+
+        <img
+            src="https://trykecorp.com/assets/img/Comp_Trike_Logo_B_0v2.png"
+            alt="Tricycle Connect Logo"
+            class="logo"
+        >
+
+        <button class="notification-button" id="notificationButton" aria-label="Notifications">
+            ♟
+        </button>
+    </header>
+
+    <main class="dashboard">
+
+        <h1>GOOD DAY, DRIVER!</h1>
+
+        <section class="profile-card">
+            <div class="profile-info">
+                <div class="profile-picture">👤</div>
+                <div>
+                    <h2 id="driverName">Milard Camongol</h2>
+                    <p class="driver-label">Tricycle Driver</p>
+                </div>
+            </div>
+
+            <div class="rating">
+                <span>★</span> 4.8
+            </div>
+        </section>
+
+        <section class="status-location">
+            <div class="status-area">
+                <span class="location-icon">📍</span>
+
+                <div>
+                    <h2 id="statusText">ONLINE</h2>
+                    <p>
+                        <span class="status-dot" id="statusDot"></span>
+                        <span id="availabilityText">READY FOR BOOKINGS</span>
+                    </p>
+
+                    <button class="status-button" id="statusButton">
+                        Go Offline
+                    </button>
+                </div>
+            </div>
+
+            <div class="location-area">
+                <span class="map-icon">🗺️</span>
+
+                <div>
+                    <h3>YOUR LOCATION</h3>
+                    <p>BARANGAY MARIKIT, PALUAN, OCC. MINDORO</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-card booking-card">
+            <div class="card-icon">🔔</div>
+
+            <div class="booking-info">
+                <h2>NEW BOOKING REQUEST</h2>
+                <p>1.2 km away • 3 passengers</p>
+            </div>
+
+            <button class="view-button" id="viewBookingButton">
+                VIEW
+            </button>
+        </section>
+
+        <section class="dashboard-card earnings-card">
+            <div class="card-icon wallet-icon">👛</div>
+
+            <div class="earnings-info">
+                <h2>TODAY'S EARNINGS</h2>
+                <p class="earnings-amount">₱680</p>
+            </div>
+
+            <button class="text-button" id="earningsButton">
+                VIEW DETAILS →
+            </button>
+        </section>
+
+        <section class="trip-history">
+            <div class="history-header">
+                <span class="clock-icon">◷</span>
+
+                <h2>RECENT TRIP HISTORY</h2>
+
+                <button class="text-button" id="historyButton">
+                    VIEW ALL →
+                </button>
+            </div>
+
+            <div class="trip-row">
+                <span class="trip-pin">📍</span>
+                <span class="trip-route">PALUAN → MAMBURAO</span>
+                <span class="trip-time">11:40 AM</span>
+                <strong>₱50</strong>
+                <span class="trip-status">COMPLETED</span>
+            </div>
+
+            <div class="trip-row">
+                <span class="trip-pin">📍</span>
+                <span class="trip-route">BRGY. MARIKIT → SCHOOL</span>
+                <span class="trip-time">9:37 AM</span>
+                <strong>₱30</strong>
+                <span class="trip-status">COMPLETED</span>
+            </div>
+
+            <div class="trip-row">
+                <span class="trip-pin">📍</span>
+                <span class="trip-route">MAMBURAO → PALUAN</span>
+                <span class="trip-time">7:50 AM</span>
+                <strong>₱80</strong>
+                <span class="trip-status">COMPLETED</span>
+            </div>
+        </section>
+
+    </main>
+
+    <nav class="bottom-navigation">
+        <button class="nav-item active" data-page="Home">
+            <span class="nav-icon">⌂</span>
+            <span>Home</span>
+        </button>
+
+        <button class="nav-item" data-page="Bookings">
+            <span class="nav-icon">▤</span>
+            <span>Bookings</span>
+        </button>
+
+        <button class="nav-item" data-page="Messages">
+            <span class="nav-icon">●</span>
+            <span>Messages</span>
+        </button>
+
+        <button class="nav-item" data-page="Earnings">
+            <span class="nav-icon">▣</span>
+            <span>Earnings</span>
+        </button>
+
+        <button class="nav-item" data-page="Profile">
+            <span class="nav-icon">●</span>
+            <span>Profile</span>
+        </button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.top-header {
+    min-height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 4%;
+    gap: 20px;
+}
+
+.menu-button,
+.notification-button {
+    border: none;
+    background: none;
+    color: #294f25;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 62%;
+    max-width: 550px;
+    max-height: 125px;
+    object-fit: contain;
+}
+
+.dashboard {
+    padding: 0 2%;
+    padding-bottom: 100px;
+}
+
+.dashboard > h1 {
+    text-align: center;
+    color: #555555;
+    font-size: 30px;
+    margin: 18px 0 48px;
+}
+
+.profile-card,
+.status-location,
+.dashboard-card {
+    background-color: #dce2d9;
+    margin-bottom: 22px;
+}
+
+.profile-card {
+    min-height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 24px;
+    gap: 15px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-picture {
+    width: 85px;
+    height: 85px;
+    border: 5px solid #1452b9;
+    border-radius: 50%;
+    background: #e4edff;
+    color: #1452b9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+}
+
+.profile-card h2 {
+    font-size: 27px;
+    margin: 0;
+}
+
+.driver-label {
+    color: #555555;
+    margin-bottom: 0;
+}
+
+.rating {
+    font-size: 32px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.rating span {
+    color: #111111;
+}
+
+.status-location {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.status-area,
+.location-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.location-icon {
+    font-size: 55px;
+}
+
+.map-icon {
+    font-size: 60px;
+}
+
+.status-area h2,
+.location-area h3 {
+    font-size: 22px;
+    margin: 0 0 15px;
+}
+
+.status-area p,
+.location-area p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #08b96b;
+    margin-right: 5px;
+}
+
+.status-button {
+    margin-top: 12px;
+    border: 1px solid #294f25;
+    border-radius: 5px;
+    padding: 6px 10px;
+    color: #294f25;
+    background: transparent;
+}
+
+.dashboard-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px;
+}
+
+.card-icon {
+    font-size: 48px;
+    min-width: 65px;
+    text-align: center;
+}
+
+.booking-info,
+.earnings-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.booking-info h2,
+.earnings-info h2 {
+    font-size: 22px;
+    margin: 0 0 18px;
+}
+
+.booking-info p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.view-button {
+    background-color: #294f25;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 12px 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.earnings-amount {
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.text-button {
+    border: none;
+    background: transparent;
+    color: #294f25;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.trip-history {
+    background-color: #d3dbd0;
+    border-radius: 30px 30px 0 0;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.history-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+}
+
+.clock-icon {
+    font-size: 45px;
+    color: #294f25;
+}
+
+.history-header h2 {
+    font-size: 19px;
+    flex: 1;
+}
+
+.trip-row {
+    display: grid;
+    grid-template-columns: 25px 1.4fr 0.8fr 0.5fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    border-bottom: 2px solid #294f25;
+    font-size: 12px;
+}
+
+.trip-pin {
+    color: #294f25;
+}
+
+.trip-status {
+    background-color: #72ed8c;
+    color: #20552a;
+    border-radius: 20px;
+    text-align: center;
+    padding: 6px 10px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 2%;
+    box-shadow: 0 -3px 10px #00000012;
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    border: none;
+    background: white;
+    color: #777777;
+    font-size: 13px;
+    padding: 5px 2px;
+}
+
+.nav-icon {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.nav-item.active {
+    color: #294f25;
+    border-bottom: 5px solid #294f25;
+}
+
+button:hover {
+    opacity: 0.82;
+}
+
+@media (max-width: 600px) {
+    .top-header {
+        min-height: 75px;
+        padding: 10px 3%;
+        gap: 8px;
+    }
+
+    .logo {
+        width: 65%;
+        max-height: 75px;
+    }
+
+    .menu-button,
+    .notification-button {
+        font-size: 27px;
+        padding: 3px;
+    }
+
+    .dashboard > h1 {
+        font-size: 21px;
+        margin: 20px 0 30px;
+    }
+
+    .profile-card {
+        min-height: 90px;
+        padding: 12px;
+    }
+
+    .profile-info {
+        gap: 10px;
+    }
+
+    .profile-picture {
+        width: 58px;
+        height: 58px;
+        font-size: 35px;
+        border-width: 3px;
+    }
+
+    .profile-card h2 {
+        font-size: 17px;
+    }
+
+    .driver-label {
+        font-size: 12px;
+    }
+
+    .rating {
+        font-size: 22px;
+    }
+
+    .status-location {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 25px;
+    }
+
+    .status-area h2,
+    .location-area h3 {
+        font-size: 18px;
+    }
+
+    .location-area p {
+        font-size: 11px;
+    }
+
+    .location-icon,
+    .map-icon {
+        font-size: 42px;
+    }
+
+    .dashboard-card {
+        gap: 10px;
+        padding: 14px 10px;
+    }
+
+    .card-icon {
+        min-width: 38px;
+        font-size: 32px;
+    }
+
+    .booking-info h2,
+    .earnings-info h2 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .booking-info p {
+        font-size: 12px;
+    }
+
+    .view-button {
+        padding: 10px 13px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+    .earnings-amount {
+        font-size: 37px;
+    }
+
+    .text-button {
+        font-size: 10px;
+        white-space: normal;
+    }
+
+    .trip-history {
+        margin-top: 35px;
+        border-radius: 22px 22px 0 0;
+    }
+
+    .history-header {
+        gap: 7px;
+        padding: 10px;
+    }
+
+    .clock-icon {
+        font-size: 30px;
+    }
+
+    .history-header h2 {
+        font-size: 12px;
+    }
+
+    .trip-row {
+        grid-template-columns: 15px 1.4fr 0.7fr 0.4fr;
+        gap: 5px;
+        padding: 8px 6px;
+        font-size: 9px;
+    }
+
+    .trip-status {
+        grid-column: 2 / -1;
+        justify-self: end;
+        padding: 4px 8px;
+        font-size: 9px;
+    }
+
+    .bottom-navigation {
+        padding: 6px 1%;
+    }
+
+    .nav-item {
+        font-size: 10px;
+    }
+
+    .nav-icon {
+        font-size: 25px;
+    }
+}
