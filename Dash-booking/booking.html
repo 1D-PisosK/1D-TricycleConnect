@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings | Tricycle Connect</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <button class="icon-button" id="menuButton" aria-label="Open menu">☰</button>
+
+        <img
+            src="https://trykecorp.com/assets/img/Comp_Trike_Logo_B_0v2.png"
+            alt="Tricycle Connect"
+            class="logo"
+        >
+
+        <button class="icon-button" id="notificationButton" aria-label="Notifications">♟</button>
+    </header>
+
+    <main>
+        <section class="booking-tabs">
+            <button class="tab active" id="requestsTab">
+                BOOKING REQUESTS <span class="count" id="requestCount">1</span>
+            </button>
+
+            <button class="tab past-tab" id="pastTab">
+                <span class="clock-icon">◷</span> PAST BOOKING
+            </button>
+        </section>
+
+        <section class="booking-content" id="currentBookings">
+
+            <div class="booking-label">New Booking</div>
+
+            <div class="booking-details">
+                <div class="passenger-section">
+                    <div class="passenger-heading">
+                        <div class="avatar">●</div>
+                        <div>
+                            <h1 id="passengerName">Jade Guarin</h1>
+                            <p class="passenger-count">♟ 2 passengers</p>
+                        </div>
+                    </div>
+
+                    <div class="location-detail">
+                        <span class="pin pickup-pin">●</span>
+                        <div>
+                            <h3>Pick-up Location</h3>
+                            <strong>BARANGAY MARIKIT, PALUAN</strong>
+                            <p>PALUAN, OCCIDENTAL MINDORO</p>
+                        </div>
+                    </div>
+
+                    <div class="location-detail">
+                        <span class="pin dropoff-pin">●</span>
+                        <div>
+                            <h3 class="dropoff-title">Drop-off location</h3>
+                            <strong>Mamburao, Occidental Mindoro</strong>
+                            <p>(Near OMSU Mamburao campus)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-section">
+                    <p class="waiting"><span>◷</span> Waiting for your response</p>
+
+                    <div class="map">
+                        <div class="park park-one"></div>
+                        <div class="park park-two"></div>
+                        <div class="water"></div>
+                        <div class="road road-one"></div>
+                        <div class="road road-two"></div>
+                        <div class="road road-three"></div>
+                        <div class="road road-four"></div>
+                        <div class="map-marker pickup-marker">●</div>
+                        <div class="map-marker dropoff-marker">●</div>
+                    </div>
+                    <p class="map-caption">Illustrative map — not live navigation</p>
+                </div>
+            </div>
+
+            <div class="trip-summary">
+                <div class="summary-item">
+                    <span>Distance</span>
+                    <strong>1.35 KM</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Est. Time</span>
+                    <strong>12 Mins.</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Fare (Estimated)</span>
+                    <strong>₱60</strong>
+                </div>
+
+                <div class="summary-item payment">
+                    <span class="cash-label">● Cash</span>
+                </div>
+            </div>
+
+            <div class="booking-actions">
+                <button class="accept-button" id="acceptButton">
+                    ACCEPT
+                    <span>Go to passenger</span>
+                </button>
+
+                <button class="decline-button" id="declineButton">
+                    DECLINE
+                    <span>Not Available</span>
+                </button>
+            </div>
+
+            <p class="feedback" id="feedback" aria-live="polite"></p>
+        </section>
+
+        <section class="past-content hidden" id="pastBookings">
+            <h2>Past Bookings</h2>
+            <div class="empty-state">
+                <span class="empty-clock">◷</span>
+                <div>
+                    <h3>No past bookings yet</h3>
+                    <p>Completed or declined requests will appear here in this demo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="upcoming-section" id="upcomingSection">
+            <div class="upcoming-heading">
+                <h2>Upcoming Bookings</h2>
+                <button id="upcomingButton
