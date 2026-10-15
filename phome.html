@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tricycle Connect</title>
+  <link rel="stylesheet" href="phome.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button" id="menuButton" aria-label="Open menu">☰</button>
+      <a class="brand" href="#" data-page="home">
+        <span class="brand-mark">T</span>
+        <span>Tricycle <b>Connect</b></span>
+      </a>
+      <button class="icon-button notification-button" aria-label="Notifications" id="notificationButton">
+        ♟<span class="notification-dot"></span>
+      </button>
+    </header>
+
+    <main>
+      <!-- HOME -->
+      <section class="page active" id="homePage">
+        <div class="welcome-card">
+          <div>
+            <p class="eyebrow">YOUR RIDE, OUR PRIORITY</p>
+            <h1>Good day, <span id="welcomeName">Jessa Dela Cruz</span>!</h1>
+            <p class="muted">Where are you going today?</p>
+          </div>
+          <div class="hero-illustration" aria-hidden="true">🛺</div>
+        </div>
+
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="destinationSearch" type="text" placeholder="Search destination..." />
+        </label>
+
+        <div class="quick-label-row">
+          <h2>Quick destinations</h2>
+          <button class="text-button" id="clearSearch">Clear</button>
+        </div>
+
+        <div class="destination-chips">
+          <button class="destination-chip" data-destination="Home"><span>⌂</span>Home</button>
+          <button class="destination-chip" data-destination="Work"><span>▣</span>Work</button>
+          <button class="destination-chip" data-destination="School"><span>▤</span>School</button>
+          <button class="destination-chip" data-destination="Paluan Public Market"><span>⌖</span>Market</button>
+        </div>
+
+        <div class="section-heading">
+          <h2>Choose your ride</h2>
+          <span class="muted small">Safe and affordable</span>
+        </div>
+
+        <div class="ride-options">
+          <button class="ride-option selected" data-ride="Tricycle">
+            <span class="ride-icon">🛺</span><b>Tricycle</b><small>2–4 passengers</small>
+          </button>
+          <button class="ride-option" data-ride="Shared ride">
+            <span class="ride-icon">👥</span><b>Shared ride</b><small>Save on fare</small>
+          </button>
+          <button class="ride-option" data-ride="Delivery">
+            <span class="ride-icon">📦</span><b>Delivery</b><small>Send a package</small>
+          </button>
+        </div>
+
+        <div class="promo-card">
+          <div class="promo-icon">⌖</div>
+          <div><b>Get there with ease</b><p>Book a ride and enjoy a convenient, reliable trip.</p></div>
+          <span class="promo-arrow">›</span>
+        </div>
+
+        <div class="section-heading">
+          <h2>Nearby drivers</h2>
+          <button class="text-button" id="seeDrivers">See all ›</button>
+        </div>
+
+        <div class="driver-card">
+          <div class="driver-avatar">👨‍✈️</div>
+          <div class="driver-info">
+            <b>Juan Dela Cruz</b>
+            <span class="rating">★ 5.0 <span class="muted">(128 rides)</span></span>
+          </div>
+          <span class="distance">3 min<br/>away</span>
+        </div>
+
+        <div class="driver-card">
+          <div class="driver-avatar">🧑‍✈️</div>
+          <div class="driver-info">
+            <b>Mark Santos</b>
+            <span class="rating">★ 4.8 <span class="muted">(96 rides)</span></span>
+          </div>
+          <span class="distance">5 min<br/>away</span>
+        </div>
+
+        <button class="primary-button full-width" id="bookRideButton">
+          Book a Tricycle <span>→</span>
+        </button>
+      </section>
+
+      <!-- BOOKINGS -->
+      <section class="page" id="bookingsPage">
+        <div class="page-heading">
+          <p class="eyebrow">YOUR TRIPS</p>
+          <h1>My Bookings</h1>
+          <p class="muted">View and manage your past and upcoming rides.</p>
+        </div>
+
+        <div class="segmented-control">
+          <button class="segment active" data-booking-tab="upcoming">Upcoming <span class="count">2</span></button>
+          <button class="segment" data-booking-tab="past">Past</button>
+        </div>
+
+        <div id="upcomingBookings" class="booking-list">
+          <article class="booking-card">
+            <div class="booking-icon">🛺</div>
+            <div class="booking-main">
+              <span class="status-pill upcoming">Upcoming</span>
+              <h3>Home <span class="route-arrow">→</span> SM Mall</h3>
+              <p>▦ May 30, 2026 · 8:15 AM</p>
+              <p class="muted small">Booking ID: TC-1048</p>
+            </div>
+            <div class="booking-side"><b>₱50</b><button class="more-button" aria-label="View booking">›</button></div>
+          </article>
+
+ 
